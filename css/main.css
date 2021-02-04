@@ -1,0 +1,410 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+/* variables */
+:root {
+  --mainbkcol: hsl(218, 28%, 13%);
+  --intro-singupbk: hsl(217, 28%, 15%);
+  --footerbk: hsl(216, 53%, 9%);
+  --testimonialbk: hsl(219, 30%, 18%);
+  --whitecol: hsl(0, 0%, 100%);
+  --iconhover: hsl(176, 68%, 64%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: var(--mainbkcol);
+  color: var(--whitecol);
+}
+
+a {
+  color: var(--whitecol);
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.7rem;
+  font-size: 14px;
+}
+
+img {
+  transition: 1s ease-in 0.1s;
+}
+
+/* REUSABLE CLASSES */
+
+/* padding classes */
+.pdy {
+  padding: 1rem 0;
+}
+.pd {
+  padding: 1rem;
+}
+
+/* flex classes */
+.flex {
+  display: flex;
+}
+
+.align {
+  align-items: center;
+}
+
+.justify {
+  justify-content: space-between;
+}
+
+/* text align classes */
+.left {
+  text-align: left;
+}
+
+/* hover effect */
+
+/* img hover */
+img:hover {
+  transform: scale(1.09);
+  transition: 1s ease-in 0.1s;
+  cursor: pointer;
+}
+
+.ul li :hover {
+  border-bottom: 1px solid var(--whitecol);
+}
+
+/* Testimonial and access hover */
+.inner:hover,
+.access:hover {
+  box-shadow: 2px 3px 15px 8px rgba(32, 42, 60, 0.5);
+  transition: 1s ease-in 0.1s;
+}
+
+/* btns hover */
+.button:hover,
+.btn:hover {
+  background-color: var(--iconhover);
+  transition: 1s ease-in-out 0.1s;
+}
+
+.underline:hover {
+  color: var(--whitecol);
+  border-color: var(--whitecol);
+}
+
+/* icon hover */
+.icons:hover,
+.icon:hover {
+  color: var(--iconhover);
+  border-color: var(--iconhover);
+}
+
+/* hover ends */
+
+/* mobile */
+
+/* navsection starts */
+
+.nav-sect {
+  padding: 3rem 1rem 2rem 1rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  background-color: var(--intro-singupbk);
+}
+
+.logo {
+  width: 5rem;
+}
+
+.ul {
+  padding: 0;
+  margin: 0;
+}
+.ul li {
+  display: inline;
+  list-style: none;
+  margin-right: 15px;
+}
+
+/* navsection ends */
+
+/* mainbody sect starts */
+
+.main-body {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* banner style starts */
+.intro {
+  background-color: var(--intro-singupbk);
+}
+
+.imgs {
+  background-image: url("/images/bg-curvy-mobile.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  width: 85%;
+  margin: auto;
+}
+
+.gridsec {
+  margin-top: 2rem;
+}
+.intro img,
+.img {
+  width: 20rem;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+.intro-text h1 {
+  line-height: 2.5rem;
+  font-weight: bolder;
+}
+/* button styling */
+.button {
+  max-width: 20rem;
+  width: 90%;
+  height: 60px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background-color: hsl(198, 60%, 50%);
+  color: var(--whitecol);
+  font-size: 20px;
+  margin: 2rem auto 6rem auto;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 1s ease-in-out 0.1s;
+}
+
+.gridsect {
+  padding: 2rem 0;
+}
+
+.underline {
+  color: var(--iconhover);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--iconhover);
+}
+
+/* banner style ends */
+
+/* testimonial starts */
+
+.profile {
+  width: 40px;
+  border-radius: 50px;
+}
+
+.quote {
+  height: 40px;
+  background: url("/images/Quote\ Left.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  margin-top: 60px;
+}
+
+.grids {
+  margin: -42px 0 100px 0;
+}
+.inner {
+  background-color: var(--testimonialbk);
+  padding: 2rem 1.2rem 0 1.2rem;
+  transition: 1s ease-in 0.1s;
+}
+
+/* testimonial ends */
+
+/* access start  */
+.access {
+  position: relative;
+  background-color: var(--intro-singupbk);
+  margin-bottom: -11rem;
+  transition: 1s ease-in 0.1s;
+}
+
+.access h1 {
+  margin-top: 1rem;
+}
+
+.flxn .inputs {
+  padding: 0 15px;
+}
+
+.flxn input {
+  font-size: 14px;
+  max-width: 50rem;
+  width: 90%;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  margin: 0.4rem 1rem 2rem 1rem;
+}
+.btn {
+  background-color: hsl(198, 60%, 50%);
+  color: var(--whitecol);
+  transition: 1s ease-in-out 0.1s;
+  cursor: pointer;
+}
+/* access ends */
+
+/* mainbody sect ends*/
+
+/* footer starts */
+.footer {
+  padding: 20rem 3rem 3rem 3rem;
+  background-color: var(--footerbk);
+  width: 100%;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.foot,
+.foots {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.foot li img {
+  padding-right: 25px;
+  width: 40px;
+}
+
+.foot li {
+  padding: 10px 0;
+}
+
+.foots {
+  list-style: none;
+}
+.foots li {
+  display: inline;
+}
+
+.icons {
+  border-radius: 30px;
+  border: 1px solid var(--whitecol);
+  padding: 5px;
+  width: 30px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* footer ends */
+
+/* desktop */
+@media screen and (min-width: 900px) {
+  /* navbar */
+  .nav-sect {
+    padding: 3rem;
+    font-size: 20px;
+  }
+  .logo {
+    width: 10rem;
+  }
+
+  /* intro */
+  .tent h1,
+  .tent p {
+    width: 50%;
+    margin: auto;
+  }
+
+  .imgs {
+    background-position: top;
+    padding: 2rem;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* grid  styling*/
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    grid-gap: 4rem;
+    align-items: center;
+  }
+  .gridn {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 2rem;
+  }
+
+  .grids {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .gridn > :nth-child(-n + 2) {
+    grid-column: span 2;
+  }
+  .gridsect {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    /* grid-column: 1; */
+  }
+
+  .flxn {
+    display: flex;
+  }
+
+  .flxn .btn {
+    max-width: 200px;
+    width: 90%;
+  }
+
+  .wdth {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 340px) and (min-width: 200px) {
+  .ul li {
+    margin-right: 9px;
+  }
+  .img,
+  .intro img {
+    width: 15rem;
+  }
+  .logo {
+    width: 4rem;
+  }
+  h1,
+  h2 {
+    font-size: 20px;
+  }
+  .flxn input {
+    width: 100%;
+  }
+}
