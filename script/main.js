@@ -5,7 +5,7 @@ const nextBtn = document.querySelector("#next");
 const prevBtn = document.querySelector("#prev");
 const container = document.getElementById("container");
 
-let index = 0
+let index = 0;
 
 const testimonies = [
   {
@@ -27,18 +27,34 @@ const testimonies = [
 ];
 
 prevBtn.addEventListener("click", () => {
+  handlePrev();
+});
+
+nextBtn.addEventListener("click", () => {
+  handleNext();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") {
+    handleNext();
+  } else if (e.key === "ArrowLeft") {
+    handlePrev();
+  }
+});
+
+const handlePrev = () => {
   if (index > 0) {
     index--;
     updateTestimony("slide-right");
   }
-});
+};
 
-nextBtn.addEventListener("click", () => {
+const handleNext = () => {
   if (index < testimonies.length - 1) {
     index++;
     updateTestimony("slide-left");
   }
-});
+};
 
 const updateTestimony = (className) => {
   const { testimony, img, name, occupation } = testimonies[index];
@@ -52,7 +68,7 @@ const updateTestimony = (className) => {
     <span>${occupation}</span>
   `;
 
-  addTransitionClassWithTimeout(className, 1500);
+  addTransitionClassWithTimeout(className, 1000);
 };
 
 const addTransitionClassWithTimeout = (className, timeout) => {
